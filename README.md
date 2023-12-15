@@ -45,10 +45,6 @@ By that i mean that when i pressed the "Start" button the timer like stuterd whi
 I fixed that by useing the clearInterval function that stop multipel intervals running.
 Another big problem i encounterd was that the output did update, when i pressed the button on the console.log it worked fine but not on the actual page.
 I solved that problem by creating a function called updateTimer and changed the some variables to strings then used inneText to update the timer value.
-Got two alert after the 4th session fix it by swaping places on some codes and rewriting some of them.
-Pressing "Reset" button i got 25:0 i fixed that by addaing a padStart method that give you a lengt to the numbers of your chose padStart(2, "0"), it was for the seconds.
-You won't be able to choose your own time on the timer but thats the whole thing behind it.
-
 
 ## Promises
 
@@ -62,5 +58,5 @@ You will be able to decrease procrastination and focus on one thing.
 1. ???
 
 <!-- MAKE SUGGESTIONS FOR WHAT THE PROGRAM WILL NOT BE ABLE TO DO. WHAT MIGHT A USER EXPECT TO DO WITH YOUR PROGRAM THAT YOU DON'T THINK WILL BE POSSIBLE TO DO BEFORE THE DEADLINE. WRITE A CLEAR LIST OF THINGS -->
-One thing the person might not be able to do is to set the amount of a longer rest.
-You wont get a signal or a sound that tells you when time is up for the studying session or the 5 min break
+One thing the person might not be able to do is to set the amount of a longer rest. On the 4th go you will get an alert to take a bigger break but a timer would start.
+That's up to the person to keep an eye on.

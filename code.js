@@ -40,7 +40,6 @@ function startTimer() {
     }, 1000);
 }
 
-
 // To pause the timer at any moment
 function pauseTimer() {
     clearInterval(timerIntervalId);

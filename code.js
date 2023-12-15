@@ -37,7 +37,7 @@ function startTimer() {
             }
         }
         updateTimer();
-    }, 1);
+    }, 1000);
 }
 
 

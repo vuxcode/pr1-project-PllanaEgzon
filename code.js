@@ -13,18 +13,19 @@ function startTimer() {
     clearInterval(timerIntervalId); // Clearing multiple running intervals
     timerIntervalId = setInterval(() => { // Updating the timer every second and runs other actions
         if (minutes === 0 && seconds === 0) {
-            lapNumber++;
-            if (lapNumber === 4) { // Alert for a longer break after the 4th time 
+            if (lapNumber === 3) { // Alert for a longer break after the 4th time 
                 alert("Good job, take a long rest");
                 resetTimer();
             } else {
-                isBreakTime = false;
                 if (isBreakTime) {
                     alert("Take a 5 min break");
                     minutes = 5;
+                    isBreakTime = false;
                 } else {
                     alert("Time to work");
                     minutes = 25;
+                    isBreakTime = true;
+                    lapNumber++;
                 }
             }
         } else {
@@ -36,7 +37,7 @@ function startTimer() {
             }
         }
         updateTimer();
-    }, 1000);
+    }, 1);
 }
 
 

@@ -9,34 +9,34 @@ var isBreakTime = true;
 var timerDisplay = document.getElementById("time");
 
 // Function that starts timer
-function startTimer(){
-    clearInterval(timerIntervalId);    // Clearing multiple running intervals
-    timerIntervalId = setInterval(() => {    // Udating the timer every second and runs other actions
+function startTimer() {
+    clearInterval(timerIntervalId); // Clearing multiple running intervals
+    timerIntervalId = setInterval(() => { // Updating the timer every second and runs other actions
         if (minutes === 0 && seconds === 0) {
-            if (lapNumber === 3){           // When to take a longer break and getting an alert from it
-                alert("Good job take a long rest");
+            lapNumber++;
+            if (lapNumber === 4) { // Alert for a longer break after the 4th time 
+                alert("Good job, take a long rest");
                 resetTimer();
             } else {
-                if (isBreakTime) {       // Alerts when you have done less the 3
-                    isBreakTime = false;
-                    lapNumber++;
+                isBreakTime = false;
+                if (isBreakTime) {
                     alert("Take a 5 min break");
                     minutes = 5;
-                } else {                // To restart the timer and studying
-                    minutes = 25
-                    isBreakTime = true;
+                } else {
+                    alert("Time to work");
+                    minutes = 25;
                 }
             }
         } else {
             if (seconds === 0) {
-                minutes--;          // Decrease the mins and sec efter exemeple 24:00 it will start at 23:59
+                minutes--; // Decrease the mins and sec, for example, 24:00 it will start at 23:59
                 seconds = 59;
             } else {
-                seconds--
+                seconds--;
             }
         }
-        updateTimer();        
-    }, 1000)
+        updateTimer();
+    }, 1000);
 }
 
 
@@ -51,14 +51,14 @@ function resetTimer() {
     minutes = 25;
     seconds = 0;
     lapNumber = 0;
-    timerIntervalId;
+    timerIntervalId
     isBreakTime = true;
     updateTimer();
 }
 
 // To update the output of the timer, the tick downs of the timer
 function updateTimer() {
-    var minutesDisplay = String(minutes);               // Converts the var from numbs to strings
-    var secondsDisplay = String(seconds);
-    timerDisplay.innerText = `${minutesDisplay}:${secondsDisplay}`;         // Update the numbers on the HTML doc
+    var minutesDisplay = String(minutes);    // Converts the var from numbs to strings
+    var secondsDisplay = String(seconds).padStart(2, '0');   // Always shows 2 numbers to seconds
+    timerDisplay.innerText = `${minutesDisplay}:${secondsDisplay}`;    // Update the numbers on the HTML doc
 }

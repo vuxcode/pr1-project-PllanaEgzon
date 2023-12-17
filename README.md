@@ -60,3 +60,11 @@ You will be able to decrease procrastination and focus on one thing.
 <!-- MAKE SUGGESTIONS FOR WHAT THE PROGRAM WILL NOT BE ABLE TO DO. WHAT MIGHT A USER EXPECT TO DO WITH YOUR PROGRAM THAT YOU DON'T THINK WILL BE POSSIBLE TO DO BEFORE THE DEADLINE. WRITE A CLEAR LIST OF THINGS -->
 One thing the person might not be able to do is to set the amount of a longer rest. On the 4th go you will get an alert to take a bigger break but a timer would start.
 That's up to the person to keep an eye on.
+
+## User Guide
+To use this the timer you press start and the timer starts to tick down. Timer starts tick from 25:00 to 0:00 after its completet the first study session an alert will pop up and tell you to take a 5 min break. Press okey and the timer starts to tick down. After the break an alert pops up to tell you to start working again. Study session will repat four times on the forth time you will get an alert that says "Good job! Take a longer rest!". The three study session you get a 5 min break with timer. On the forth one you get to decide your self how long you should take a break, the timer dosen't do that so its up to you.
+If you need to pause there is a "Pause" button that allows you to pause the timer. The timer will then stop on the spot with the timer numbers being stop at, if the timer is on 22:53 and you press "Pause" button it will stop at that time to continue you press start again and then it continues from 22:53 ticking down.
+There is also a "Reset" button that reset the whole timer. If you are on the third study session of the timer and you press the "Reset button it will reset everything and you start on the first study session again.
+
+## Project Summary
+To
